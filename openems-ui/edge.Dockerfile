@@ -7,6 +7,7 @@ WORKDIR /openems/ui
 
 RUN npm i -g  @angular/cli
 RUN npm install
+ADD language.ts app/shared/type/language.ts
 RUN ng build -c "openems,openems-edge-dev"
 
 # ---------------------------------------------
