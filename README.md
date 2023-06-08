@@ -1,6 +1,8 @@
-# OpenEMS practical info
+# OpenEMS
 
 https://openems.github.io/openems.io/openems/latest/gettingstarted.html
+
+Running OpenEMS ecosystem in docker (with some simulation enabled)
 
 # Docker
 
@@ -36,3 +38,9 @@ http://localhost:8079/system/console/configMgr
 
 ## UI
 http://localhost:4202
+
+### Useful links
+Simulate OCPP connection:
+https://simplesimulator.consolinno-it.de/
+
+Simply point it at `ws://localhost:8887`
