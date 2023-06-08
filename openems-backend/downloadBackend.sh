@@ -1,0 +1,1 @@
+curl -s https://api.github.com/repos/OpenEMS/openems/releases/latest | awk -F\" '/browser_download_url.*openems-backend\.jar/{print $(NF-1)}' | xargs wget -q -O openems-backend.jar

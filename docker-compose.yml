@@ -1,0 +1,31 @@
+version: '3'
+services:
+  openems-backend:
+    image: openems-backend
+    ports:
+      - 8075:8075 # Backend2Backend.Rest
+      - 8076:8076 # Backend2Backend.Websocket
+      - 8079:8079 # Apache Felix Web Console
+      - 8081:8081 # Edge.Websocket
+      - 8082:8082 # Ui.Websocket
+  openems-edge:
+    image: openems-edge
+    depends_on:
+      - openems-backend
+    ports:
+      - 8080:8080 # Apache Felix Web Console
+      - 8084:8084 # Controller.Api.Rest.ReadOnly
+      - 8085:8085 # Controller.Api.Websocket
+      - 8887:8887 # OCPP 1.6J Server
+  openems-ui-edge:
+    image: openems-ui-edge
+    depends_on:
+      - openems-edge
+    ports:
+      - 4201:8000
+  openems-ui-backend:
+    image: openems-ui-backend
+    depends_on:
+      - openems-backend
+    ports:
+      - 4202:8000

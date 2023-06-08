@@ -1,0 +1,7 @@
+:org.apache.felix.configadmin.revision:=L"1"
+database="openems"
+pgUser="openems"
+pgPassword="openems"
+service.pid="Metadata.Odoo"
+odooPassword="admin"
+odooUid=I"2"
