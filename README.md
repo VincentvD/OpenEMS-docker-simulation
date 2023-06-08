@@ -30,7 +30,7 @@ docker build -f edge.Dockerfile -t openems-ui-edge .
 
 ## Run
 
-`docker-compose up`
+`docker-compose up --force-recreate`
 
 # OpenEMS Edge
 ## Apache Felix Web Console Configuration 
