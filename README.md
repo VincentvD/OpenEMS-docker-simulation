@@ -10,11 +10,15 @@ Running OpenEMS ecosystem in docker (with some simulation enabled)
 
 Enter the following commands in their respective folders.
 
-`./downloadBackend.sh`
-`docker build -t openems-backend .`
+```
+./downloadBackend.sh
+docker build -t openems-backend .
+```
 
-`./downloadEdge.sh`
-`docker build -t openems-edge .`
+```
+./downloadEdge.sh
+docker build -t openems-edge .
+```
 
 `docker build -f backend.Dockerfile -t openems-ui-backend .`
 
